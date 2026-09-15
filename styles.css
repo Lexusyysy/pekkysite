@@ -1,0 +1,422 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  overflow-x: hidden;
+}
+
+/* Header & Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #FEFBE0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.site-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* Navbar Logo Buttons */
+.nav-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-social-btn {
+  background-color: #FDDC4C;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-social-btn svg {
+  display: block;
+}
+
+.nav-social-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Marquee Banner */
+.marquee-container {
+  background-color: #EE4444;
+  color: #ffffff;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 40px 60px 40px;
+  background-color: #F9FAF2;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  transform: translateY(-20px);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: #000000;
+  margin: 0 0 15px 0;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Join Now Button */
+.btn-join {
+  background-color: #EDC84D;
+  color: #ffffff;
+  padding: 14px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.btn-join:hover {
+  transform: translateY(-2px);
+}
+
+/* Hero image moved further up */
+.hero-img-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  transform: translate(90px, -50px);
+}
+
+.duck-hero-img {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Roadmap Section */
+.roadmap-section {
+  background-color: #F9FAF2;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.roadmap-main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+}
+
+.roadmap-subtitle {
+  max-width: 650px;
+  margin: 0 auto 50px auto;
+  font-size: 1.1rem;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Central Line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #E9DF56;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: left;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Central Dots */
+.timeline-dot {
+  position: absolute;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  background-color: #E9DF56;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.timeline-item.left .timeline-dot {
+  right: -8px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -8px;
+}
+
+/* Phase Cards */
+.timeline-card {
+  background-color: #F5F3C8;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.timeline-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.3rem;
+  color: #000000;
+  font-weight: 700;
+}
+
+.timeline-card ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #000000;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Tokenomics Section */
+.tokenomics-section {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F9FAF2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.tokenomics-img-wrapper {
+  margin-bottom: 30px;
+}
+
+.tokenomics-chart-img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+.tokenomics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.tokenomics-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.color-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Tokenomics Circle Legend Colors */
+.yellow-dot { background-color: #FDDC4C; }
+.dev-dot { background-color: #DD44A4; }
+.lp-dot { background-color: #1132B5; }
+.airdrop-dot { background-color: #69E0FE; }
+
+.arrow {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #FEFBE0;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #eedc9a;
+}
+
+.site-footer p {
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon-btn {
+  background-color: #FDDC4C;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.social-icon-btn svg {
+  display: block;
+}
+
+.social-icon-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    transform: none;
+  }
+
+  .hero-img-wrapper {
+    transform: none;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 10px;
+  }
+
+  .timeline-item.left, .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    left: 12px;
+    right: auto;
+  }
+}
